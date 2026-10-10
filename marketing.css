@@ -141,11 +141,6 @@ section.block h2 { letter-spacing: -.045em; }
 .shot figcaption strong { font-size: 19px; }
 .contact a { transition: border-color .2s, transform .2s, box-shadow .2s; }
 .contact a:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(24, 59, 83, .08); }
-.contact-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 22px; align-items: stretch; }
-.contact-portrait { margin: 0; min-height: 300px; overflow: hidden; border-radius: 14px; background: var(--blue-soft); box-shadow: 0 16px 34px rgba(24, 59, 83, .08); }
-.contact-portrait img { display: block; width: 100%; height: 100%; min-height: 300px; object-fit: cover; object-position: center 42%; }
-.contact-layout .contact { display: grid; grid-template-columns: minmax(0, 1fr); align-content: stretch; }
-.contact-layout .contact a { align-content: center; }
 .final { margin-top: 20px; padding-block: 84px; border-radius: 18px; background: #eaf1f5; border: 1px solid var(--line); }
 .final::before { display: none; }
 .final h2 { max-width: 20ch; letter-spacing: -.055em; }
@@ -173,8 +168,6 @@ footer { margin-top: 40px; padding-bottom: 42px; }
   .story { grid-template-columns: 1fr; margin-bottom: 60px; }
   .story-photo { min-height: 270px; max-height: 360px; }
   .story-copy { padding: 34px 28px 40px; }
-  .contact-layout { grid-template-columns: 1fr; }
-  .contact-portrait { max-height: 360px; }
   section.block { padding-block: 62px; }
   .final { padding: 65px 22px; }
 }

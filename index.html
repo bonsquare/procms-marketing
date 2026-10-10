@@ -297,10 +297,12 @@ section.block#snapshots::before { content: ""; position: absolute; z-index: -1; 
 </section>
 
 <section class="block" id="contact"><div class="head"><p class="eyebrow">Contact us</p><h2>Need help? Contact ProcMS Support.</h2><p class="sub">Ask about the demo, a school or division setup, or what is being built next. Message us on Facebook.</p></div>
+<div class="contact-layout">
+<figure class="contact-portrait"><img src="assets/provided-portrait.jpg" alt="Portrait of a woman holding a bouquet of red roses" width="2046" height="1364" loading="lazy"></figure>
 <div class="contact">
 <a href="https://www.facebook.com/rizzamae.sedimo" target="_blank" rel="noopener"><span class="tag">Support</span><strong>facebook.com/rizzamae.sedimo</strong><span class="go">Message Support on Facebook</span></a>
 <a href="https://www.facebook.com/bonieofficial2" target="_blank" rel="noopener"><span class="tag">Support</span><strong>facebook.com/bonieofficial2</strong><span class="go">Message Support on Facebook</span></a>
-</div></section>
+</div></div></section>
 
 <section class="final">
   <h2>See it with your own hands before you decide.</h2>
@@ -326,7 +328,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
       );
     });
   }, { threshold: .12, rootMargin: '0px 0px -30px 0px' });
-  document.querySelectorAll('.value-grid article, .story, .demo, .mod, .shot, .platform > div, .road > div, .contact a, .final').forEach((element) => reveal.observe(element));
+  document.querySelectorAll('.value-grid article, .story, .demo, .mod, .shot, .platform > div, .road > div, .contact-portrait, .contact a, .final').forEach((element) => reveal.observe(element));
 }
 </script>
 <script>

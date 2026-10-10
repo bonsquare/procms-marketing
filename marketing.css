@@ -69,6 +69,7 @@ header.top {
   background: repeating-radial-gradient(circle at 78% 45%, transparent 0 53px, rgba(46, 112, 129, .09) 54px 55px, transparent 56px 92px);
   opacity: .7;
   pointer-events: none;
+  transform: none;
   -webkit-mask-image: radial-gradient(ellipse at 70% 45%, #000 22%, transparent 73%);
   mask-image: radial-gradient(ellipse at 70% 45%, #000 22%, transparent 73%);
 }
@@ -81,7 +82,7 @@ header.top {
 .hero-photo figcaption, .story-photo span { position: absolute; left: 14px; bottom: 13px; padding: 4px 8px; border-radius: 4px; background: rgba(19, 39, 57, .66); color: #fff; font: 500 10px var(--mono); letter-spacing: .03em; }
 .hero-kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: .1em; color: var(--green); }
 .kicker-dot { width: 8px; height: 8px; border-radius: 50%; background: #2ca276; box-shadow: 0 0 0 5px rgba(44, 162, 118, .12); }
-.hero h1 { max-width: 12ch; margin-top: 23px; font-size: clamp(45px, 5.1vw, 72px); line-height: 1.055; letter-spacing: -.065em; }
+.hero h1 { max-width: 15ch; margin-top: 23px; font-size: clamp(45px, 5.1vw, 72px); line-height: 1.055; letter-spacing: -.065em; }
 .hero h1 em { color: var(--green); }
 .hero .lead { max-width: 53ch; margin-top: 26px; font-size: clamp(17px, 1.6vw, 19px); line-height: 1.72; }
 .hero .actions { margin-top: 32px; }
@@ -97,8 +98,8 @@ header.top {
   border-radius: 18px;
   border-color: #d8e2e9;
   box-shadow: 0 28px 65px rgba(34, 69, 96, .13), 0 4px 12px rgba(34, 69, 96, .04);
-  transform: rotate(1.3deg);
-  margin: -48px 0 0 34px;
+  transform: none;
+  margin: 18px 0 0;
 }
 .trail-top { display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .trail-top .eyebrow { margin: 0; color: var(--ink); font-size: 11px; }
@@ -111,10 +112,9 @@ header.top {
 .trail .foot { display: flex; gap: 9px; line-height: 1.5; }
 .trail .foot span { color: var(--green); font-size: 18px; }
 
-.value-band { position: relative; padding: 60px 0 70px; border-top: 1px solid var(--line); isolation: isolate; }
-.value-band::before { content: ""; position: absolute; z-index: -1; inset: 0; background: radial-gradient(ellipse at 10% 20%, rgba(203, 230, 215, .55), transparent 43%), linear-gradient(180deg, rgba(255,255,255,.15), rgba(232,240,246,.34)); pointer-events: none; }
-.value-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; align-items: start; margin-bottom: 34px; }
-.value-intro .eyebrow { margin-top: 10px; color: var(--green); }
+.value-band { position: relative; margin: 20px 0 76px; padding: clamp(36px, 5vw, 60px) clamp(24px, 4vw, 48px); border: 1px solid #d4e4e4; border-radius: 22px; overflow: hidden; background: radial-gradient(circle at 10% 5%, rgba(198, 230, 214, .76), transparent 42%), radial-gradient(circle at 90% 100%, rgba(210, 229, 243, .8), transparent 43%), linear-gradient(135deg, #f8fbfa, #edf4f6); }
+.value-intro { max-width: 780px; margin-bottom: 34px; }
+.value-intro .eyebrow { margin: 0 0 16px; color: var(--green); }
 .value-intro h2 { font-size: clamp(30px, 3.5vw, 45px); line-height: 1.12; letter-spacing: -.055em; }
 .value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .value-grid article { min-height: 215px; padding: 27px; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 10px 30px rgba(24, 59, 83, .035); }
@@ -180,10 +180,10 @@ footer { margin-top: 40px; padding-bottom: 42px; }
   .hero { padding-block: 58px 70px; }
   .hero h1 { font-size: clamp(43px, 10vw, 62px); }
   .hero .actions .btn { justify-content: center; }
-  .value-intro, .value-grid { grid-template-columns: 1fr; }
+  .value-grid { grid-template-columns: 1fr; }
   .value-grid article { min-height: 0; padding: 24px; }
   .value-grid h3 { margin-top: 19px; }
-  .value-band { padding-block: 56px; }
+  .value-band { margin-bottom: 60px; padding: 38px 24px; }
   .story { grid-template-columns: 1fr; margin-bottom: 60px; }
   .story-photo { min-height: 270px; max-height: 360px; }
   .story-copy { padding: 34px 28px 40px; }
@@ -196,8 +196,6 @@ footer { margin-top: 40px; padding-bottom: 42px; }
   .hero .actions { display: grid; }
   .hero .lead { font-size: 16px; }
   .trail { padding: 20px 18px 14px; }
-  .trail { margin: -24px 0 0 10px; }
-  .hero-photo { margin-right: 10px; }
   .trail-top { align-items: flex-start; }
   .trail li { grid-template-columns: 58px minmax(0, 1fr); gap: 8px; }
   .trail small { max-width: none; }

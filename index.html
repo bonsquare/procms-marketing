@@ -145,7 +145,7 @@ footer { padding-block: 20px 36px; border-top: 1px solid var(--line); font-size:
 @media (max-width: 860px) { .shots { grid-template-columns: minmax(0, 1fr); } }
 
 /* Backgrounds: the app's own screens, tilted, faded and kept behind the text. */
-:root { --bg-planning: url("assets/screenshot-1.png"); --bg-budget: url("assets/screenshot-2.png"); --bg-liquidation: url("assets/screenshot-3.png"); --bg-sip: url("assets/screenshot-4.png"); --ghost: 0.55; }
+:root { --bg-planning: url("assets/screenshot-1.png"); --bg-budget: url("assets/screenshot-2.png"); --bg-liquidation: url("assets/screenshot-3.png"); --ghost: 0.55; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ghost: 0.4; } }
 :root[data-theme="dark"] { --ghost: 0.4; }
 .hero { position: relative; isolation: isolate; overflow: clip; }
@@ -156,7 +156,6 @@ footer { padding-block: 20px 36px; border-top: 1px solid var(--line); font-size:
 .final { position: relative; isolation: isolate; overflow: clip; }
 .final::before { content: ""; position: absolute; z-index: -1; inset: 24px 0 0; background: var(--bg-liquidation) center / 78% auto no-repeat; opacity: calc(var(--ghost) * 0.55); -webkit-mask-image: radial-gradient(ellipse at center, #000 10%, transparent 68%); mask-image: radial-gradient(ellipse at center, #000 10%, transparent 68%); }
 section.block#snapshots { position: relative; isolation: isolate; overflow: clip; }
-section.block#snapshots::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--bg-sip) center top / 70% auto no-repeat; opacity: calc(var(--ghost) * 0.35); -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%); mask-image: linear-gradient(to bottom, #000, transparent 70%); }
 @media (max-width: 860px) {
   .hero::before { left: 10%; right: -200px; opacity: calc(var(--ghost) * 0.7); }
   .hero::after { background: linear-gradient(180deg, var(--bg) 20%, transparent 90%); }

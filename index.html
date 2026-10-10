@@ -201,6 +201,11 @@ section.block#snapshots::before { content: ""; position: absolute; z-index: -1; 
     <div class="actions"><a class="btn" href="#try">Explore the free demo <span aria-hidden="true">↗</span></a><a class="btn ghost" href="#snapshots">See the product <span aria-hidden="true">↓</span></a></div>
     <p class="free"><span class="free-check" aria-hidden="true">✓</span> No sign-up needed <span class="free-divider" aria-hidden="true">·</span> Sample data only <span class="free-divider" aria-hidden="true">·</span> Resets daily</p>
   </div>
+  <div class="hero-art">
+  <figure class="hero-photo">
+    <img src="assets/school-administrator.jpg" alt="School administrator reviewing documents at a desk" width="1774" height="887" fetchpriority="high">
+    <figcaption>Illustrative image</figcaption>
+  </figure>
   <aside class="trail" aria-label="Sample record trail">
     <div class="trail-top"><p class="eyebrow">One purchase. One clear trail.</p><span class="trail-badge">SAMPLE WORKFLOW</span></div>
     <ol>
@@ -214,6 +219,7 @@ section.block#snapshots::before { content: ""; position: absolute; z-index: -1; 
     </ol>
     <p class="foot"><span aria-hidden="true">↳</span> Follow the purchase from its plan to its final report.</p>
   </aside>
+  </div>
 </section>
 
 <section class="value-band" id="benefits" aria-labelledby="benefits-title">
@@ -222,6 +228,19 @@ section.block#snapshots::before { content: ""; position: absolute; z-index: -1; 
     <article><span class="value-number">01 / CONNECT</span><h3>Trace the source</h3><p>Open a purchase and see the plans, approved items, and budget line behind it.</p></article>
     <article><span class="value-number">02 / CONTROL</span><h3>Work from the balance</h3><p>Review allotments, obligations, and payments alongside the funds still available.</p></article>
     <article><span class="value-number">03 / REPORT</span><h3>Print with confidence</h3><p>Prepare the forms and reports your team needs from records already in the system.</p></article>
+  </div>
+</section>
+
+<section class="story" aria-labelledby="story-title">
+  <div class="story-photo">
+    <img src="assets/school-team-workflow.jpg" alt="School office colleagues reviewing records together" width="1536" height="1024" loading="lazy">
+    <span>Illustrative image</span>
+  </div>
+  <div class="story-copy">
+    <p class="eyebrow">Made for the people doing the work</p>
+    <h2 id="story-title">The next step is easier when the last one is clear.</h2>
+    <p>Planning, procurement, finance, and liquidation each have their own tasks. ProcMS brings their records into one connected trail so teams can pick up the work with context.</p>
+    <a href="#modules" class="story-link">Explore the four modules <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
@@ -293,6 +312,23 @@ section.block#snapshots::before { content: ""; position: absolute; z-index: -1; 
 <footer><span>ProcMS · School procurement, budget and liquidation</span><span>The demo contains sample data only.</span></footer>
 </div>
 
+<script>
+if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (!entry.isIntersecting) return;
+      reveal.unobserve(entry.target);
+      if (motionPreference.matches) return;
+      entry.target.animate(
+        [{ opacity: .72, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 600, delay: Math.min(index * 45, 180), easing: 'cubic-bezier(.16, 1, .3, 1)' }
+      );
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.value-grid article, .story, .demo, .mod, .shot, .platform > div, .road > div, .contact a, .final').forEach((element) => reveal.observe(element));
+}
+</script>
 <script>
 document.querySelectorAll('[data-copy]').forEach(function (button) {
   button.addEventListener('click', function () {
